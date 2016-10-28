@@ -11,7 +11,7 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        <ListBox SelectionMode="Multiple" x:Name="lstFunctions" ItemsSource="{Binding strList}" DisplayMemberPath="FunctionName" SelectedIndex="0">
+        <ListBox SelectionMode="Multiple" x:Name="lstFunctions" ItemsSource="{Binding strList}" DisplayMemberPath="FunctionName" >
         </ListBox>
 
         <Button Grid.Row="1" HorizontalAlignment="Right" Content="Ok" Command="{Binding OkFunctionCommand}" CommandParameter="{Binding ElementName=lstFunctions,Path=SelectedItems}"></Button>

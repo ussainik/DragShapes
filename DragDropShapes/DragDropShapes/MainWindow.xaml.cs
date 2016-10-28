@@ -13,7 +13,7 @@ namespace DragDropShapes
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window,INotifyPropertyChanged
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private Grid grid = null;
         private UserDialog dialog = null;
@@ -22,9 +22,9 @@ namespace DragDropShapes
         Shape result = null;
         Grid shapetoDelete = null;
         public List<Function> strList { get; set; }
-        
+        private RectangleFunctions rectangleDialog;
         bool IsEdit = false;
-        
+        private static int i = 1;
         public MainWindow()
         {
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace DragDropShapes
         private ListBoxItem draggedItem;
         private ICommand _okCommand;
         private ICommand _okOnFunctionCommand;
-        
+
         private string _text;
         public string Text
         {
@@ -71,7 +71,7 @@ namespace DragDropShapes
         {
             get
             {
-                if (_okOnFunctionCommand== null)
+                if (_okOnFunctionCommand == null)
                 {
                     _okOnFunctionCommand = new DragDropShapes.RelayCommand<object>(new Action<object>(FindSelectedFunction));
                 }
@@ -79,7 +79,7 @@ namespace DragDropShapes
             }
         }
 
-        
+
 
         public List<Function> PopulateAllFunctions()
         {
@@ -102,7 +102,7 @@ namespace DragDropShapes
             results.Add(new Function()
             {
                 NameSpace = "SomethingElse2",
-                FunctionName = "FunctionC"
+                FunctionName = "FunctionD"
             });
             return results;
         }
@@ -204,7 +204,7 @@ namespace DragDropShapes
 
             if (!mouserelease)
             {
-                
+
                 x2 = e.GetPosition(this.cvsSurface).X;
                 y2 = e.GetPosition(this.cvsSurface).Y;
                 Point P1 = new Point();
@@ -302,7 +302,7 @@ namespace DragDropShapes
             }
         }
 
-       
+
 
 
         private void Sp_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -319,7 +319,7 @@ namespace DragDropShapes
                 var rectangle = FindChild<Rectangle>(grid, "rct");
                 if (rectangle != null)
                 {
-                    RectangleFunctions rfunctions = new RectangleFunctions()
+                    rectangleDialog = new RectangleFunctions()
                     {
                         DataContext = this,
                         Height = 280,
@@ -327,7 +327,7 @@ namespace DragDropShapes
                         MaxHeight = 280,
                         MaxWidth = 300
                     };
-                    rfunctions.ShowDialog();
+                    rectangleDialog.ShowDialog();
                     return;
                 }
                 dialog = new UserDialog()
@@ -345,7 +345,7 @@ namespace DragDropShapes
                 grid.Focus();
                 x1 = e.GetPosition(this.cvsSurface).X;
                 y1 = e.GetPosition(this.cvsSurface).Y;
-                
+
                 shapetoDelete = new Grid();
                 shapetoDelete = sender as Grid;
             }
@@ -366,38 +366,49 @@ namespace DragDropShapes
                 }
 
                 TextBlock tbl = new TextBlock()
-                    {
-                        Name = "tblMessage",
-                        Text = obj.ToString(),
-                        FontSize = 12,
+                {
+                    Name = "tblMessage",
+                    Text = obj.ToString(),
+                    FontSize = 12,
 
-                    };
-                    //Panel.SetZIndex(tbl, 20);
-                    if (c1 == 0 && c2 == 0)
-                    {
-                        tbl.HorizontalAlignment = HorizontalAlignment.Center;
-                        tbl.VerticalAlignment = VerticalAlignment.Center;
-                        grid.Children.Add(tbl);
-                    }
-                    else
-                    {
+                };
+                //Panel.SetZIndex(tbl, 20);
+                if (c1 == 0 && c2 == 0)
+                {
+                    tbl.HorizontalAlignment = HorizontalAlignment.Center;
+                    tbl.VerticalAlignment = VerticalAlignment.Center;
+                    grid.Children.Add(tbl);
+                }
+                else
+                {
 
                     //grid.Margin = new Thickness(0, 5, 0, 0);
                     tbl.Margin = new Thickness(c1 + 4, c2 + 6, 0, 0);
                     cvsSurface.Children.Add(tbl);
-                    }
-                    dialog.Close();
-              
+                }
+                dialog.Close();
+
             }
 
         }
 
         private void FindSelectedFunction(object obj)
         {
-            //var selectedResults = (List<object>)obj;
+            //int i = 0;
             foreach (var f in (obj as System.Collections.IList).Cast<Function>())
+            {  
+                TextBlock tbl = new TextBlock();
+                tbl.Text = f.FunctionName;
+                tbl.Margin = new Thickness(0, i, 0, 0);
+                i += 11;
+                if (grid != null)
+                {
+                    grid.Children.Add(tbl);
+                }
+            }
+            if (rectangleDialog != null)
             {
-                MessageBox.Show(f.FunctionName);
+                rectangleDialog.Close();
             }
         }
 

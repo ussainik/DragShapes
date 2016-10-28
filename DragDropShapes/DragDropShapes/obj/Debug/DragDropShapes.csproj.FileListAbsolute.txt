@@ -34,3 +34,23 @@ C:\Users\chand\OneDrive\Documents\Visual Studio 2013\Projects\DragDropShapes\Dra
 C:\Users\chand\OneDrive\Documents\Visual Studio 2013\Projects\DragDropShapes\DragDropShapes\obj\Debug\RectangleFunctions.g.cs
 C:\Users\chand\OneDrive\Documents\Visual Studio 2013\Projects\DragDropShapes\DragDropShapes\obj\Debug\RectangleFunctions.baml
 C:\Users\chand\OneDrive\Documents\Visual Studio 2013\Projects\DragDropShapes\DragDropShapes\obj\Debug\DragDropShapes.csprojResolveAssemblyReference.cache
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\bin\Debug\DragDropShapes.exe.config
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\DragDropShapes.exe
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\DragDropShapes.pdb
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\bin\Debug\DragDropShapes.exe
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\bin\Debug\DragDropShapes.pdb
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\bin\Debug\ServiceStack.Text.dll
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\bin\Debug\ServiceStack.Text.xml
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\MainWindow.g.cs
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\RectangleFunctions.g.cs
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\UserDialog.g.cs
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\App.g.cs
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\DragDropShapes_MarkupCompile.cache
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\DragDropShapes_MarkupCompile.lref
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\MainWindow.baml
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\RectangleFunctions.baml
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\UserDialog.baml
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\DragDropShapes.g.resources
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\DragDropShapes.Properties.Resources.resources
+C:\Users\chand\Desktop\github\DragShapes\DragDropShapes\DragDropShapes\obj\Debug\DragDropShapes.csproj.GenerateResource.Cache
